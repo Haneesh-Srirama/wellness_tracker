@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# SQLite Databases
+database/wellness.db
+database/*.db
+
+# OS Files
+.DS_Store
+Thumbs.db

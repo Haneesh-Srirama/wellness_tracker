@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+plotly
+streamlit-authenticator
+google-genai
+python-dotenv
+streamlit-mic-recorder
+SpeechRecognition
+pydub
+groq
