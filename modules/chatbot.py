@@ -4,6 +4,9 @@ from google import genai
 
 def get_gemini_response(prompt_or_part, context_df, history=None):
     """Query Gemini with the user's context, history, and either a string prompt or an Audio Part."""
+    from dotenv import load_dotenv
+    load_dotenv()
+    
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         try:
