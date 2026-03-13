@@ -30,9 +30,15 @@ def transcribe_audio_with_groq(audio_bytes):
     if not audio_bytes:
         return None
     try:
+        from dotenv import load_dotenv
+        load_dotenv()
+        
         api_key = os.getenv("GROQ_API_KEY")
         if not api_key:
-            api_key = st.secrets.get("GROQ_API_KEY")
+            try:
+                api_key = st.secrets["GROQ_API_KEY"]
+            except Exception:
+                pass
             
         if not api_key:
             st.error("Groq API key not found. Please add GROQ_API_KEY to your .env file.")
